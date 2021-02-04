@@ -51,7 +51,6 @@ function printData(data) {
                                                             <p> ${arrayAnswers[1]} </p>
                                                             <p> ${arrayAnswers[2]} </p>
                                                             <p> ${arrayAnswers[3]} </p>
-                                                            <button> Score </button>
                                                         </form>                      
                                                     </div>
                                                 </div>
@@ -60,16 +59,25 @@ function printData(data) {
     });
 }
 
-function results() {
-    const array = [0, 1, 1, 1, 0, 0, 0, 1, 0];
-    const score = 0;
-
-    array.forEach(element => {
-        score += element
-    })
-
-    console.log(ejecutando)
+//funcion para esconder elementos
+function changeElements() {
+    const selector = document.getElementById("selector-container")
+    selector.classList.add('hide-element');
+    const button = document.getElementById("score-button")
+    button.classList.remove('hide-element');
 }
+
+
+// function results() {
+//     const array = [0, 1, 1, 1, 0, 0, 0, 1, 0];
+//     const score = 0;
+
+//     array.forEach(element => {
+//         score += element
+//     })
+
+//     console.log(ejecutando)
+// }
 
 getCategories();
 
