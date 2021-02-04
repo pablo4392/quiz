@@ -20,6 +20,7 @@
 
 .background-card {
     background-color: rgba(5, 43, 85, 0.8);
+    border-radius: 1rem;
 }
 
 .background-select {
@@ -34,5 +35,6 @@
     color: black;
     font-size: 20px;
     font-weight: bold;
+    border-radius: 1rem;
     background-color: rgba(58, 150, 179, 0.63);
 }
