@@ -76,6 +76,7 @@ function finish() {
 }
 
 function score() {
+    const scoreContainer = document.getElementById('card-score');
     let i = 0;
     let total = 0; 
     
@@ -88,7 +89,11 @@ function score() {
         }
     }
     console.log(total)
-    alert(total)
+    scoreContainer.innerHTML = `<div class="card col-md-5 text-color text-center background-card">
+                                    <h3>Your Score is </h3>
+                                    <p>${total} de 10 </p>
+                                </div>`
+    // alert(total)
 }
 
 getCategories();
