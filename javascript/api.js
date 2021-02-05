@@ -77,39 +77,18 @@ function finish() {
 
 function score() {
     let i = 0;
-    let total = 0;
-
-    while(i < 50) {
-        if (i < 10) {
-            const scoreTen = document.querySelector(`input[name="card-${i}"]:checked`).value;
-            console.log(scoreTen);
-        } if (i < 20) {
-            const scoreTwenty = document.querySelector(`input[name="card-${i}"]:checked`).value;
-            console.log(scoreTwenty);
-        } if (i < 30) {
-            const scoreThirty = document.querySelector(`input[name="card-${i}"]:checked`).value;
-            console.log(scoreThirty);
-        } if (i < 40){
-            const scoreFourty = document.querySelector(`input[name="card-${i}"]:checked`).value;
-            console.log(scoreFourty);
-        }
-        const scoreFifty = document.querySelector(`input[name="card-${i}"]:checked`).value;
-        console.log(scoreFifty);
-        // console.log(document.querySelector(`input[name="card-${i}"]:checked`).value);
+    let total = 0; 
+    
+    while(i < 10) {
+        const result = document.querySelector(`input[name="card-${i}"]:checked`).value;
+        console.log(result);
         i++
+        if (result == 1) {
+            total += 1
+        }
     }
-    // console.log(document.querySelector('input[name="card-1"]:checked').value);
-    // console.log(document.querySelector('input[name="card-2"]:checked').value);
-    // console.log(document.querySelector('input[name="card-3"]:checked').value);
-    // console.log(document.querySelector('input[name="card-4"]:checked').value);
-    // console.log(document.querySelector('input[name="card-5"]:checked').value);
-    // console.log(document.querySelector('input[name="card-6"]:checked').value);
-    // console.log(document.querySelector('input[name="card-7"]:checked').value);
-    // console.log(document.querySelector('input[name="card-8"]:checked').value);
-    // console.log(document.querySelector('input[name="card-9"]:checked').value);
-    // if(null) {
-    //     alert('debes contestar todas las preguntas')
-    // }
+    console.log(total)
+    alert(total)
 }
 
 getCategories();
