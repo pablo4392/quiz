@@ -16,15 +16,15 @@
                 <div class="card-body">
                     <h1 class="text-center text-color title-font">WELCOME TO TRIVIA</h1>
                     <h3 class="text-center text-color subtitle-font">Lets go to play!</h3>
-                    <form action="/questions" onsubmit="event.preventDefault(), getQuestions(), changeElements()">
+                    <form action="/questions" onsubmit="event.preventDefault(), getQuestions(), start()">
                         <label for="questions" class="label-size text-color">How many questions do you want to answer?</label>
                         <select class="form-select mt-2 background-card text-color" id="questions" required>
                             <option selected>Click here</option>
-                            <option>10</option>
-                            <option>20</option>
-                            <option>30</option>
-                            <option>40</option>
-                            <option>50</option>
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+                            <option value="50">50</option>
                         </select>
                         <label for="category-selector" class="label-size text-color mt-3">Select category</label>
                         <select class="form-select mt-2 background-card text-color" id="category-selector" required>
@@ -50,7 +50,7 @@
             <div class="row" id="questions-container">
                 <!-- aqui iran las preguntas que obtendremos de la API -->
             </div>
-            <button class="btn btn-danger my-5 col col-md-8 hide-element" onclick="event.preventDefault()" id="score-button">Get score</button>
+            <button class="btn btn-danger my-5 col col-md-8 hide-element" onclick="event.preventDefault(), score(), finish()" id="score-button">Get score</button>
         </div>
     </div>
     <script src="./javascript/api.js"></script>

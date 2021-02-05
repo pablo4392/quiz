@@ -59,26 +59,57 @@ function printData(data) {
     });
 }
 
-//funcion para esconder elementos
-function changeElements() {
+//Cambio de elementos 
+function start() {
     const selector = document.getElementById("selector-container")
     selector.classList.add('hide-element');
     const button = document.getElementById("score-button")
     button.classList.remove('hide-element');
 }
+function finish() {
+    const selector = document.getElementById("score-button");
+    selector.classList.add('hide-element')
+    const button = document.getElementById("selector-container");
+    button.classList.remove('hide-element')
+    const questionContainer = document.getElementById('questions-container');
+    questionContainer.innerHTML = "";
+}
 
+function score() {
+    let i = 0;
+    let total = 0;
 
-// function results() {
-//     const array = [0, 1, 1, 1, 0, 0, 0, 1, 0];
-//     const score = 0;
-
-//     array.forEach(element => {
-//         score += element
-//     })
-
-//     console.log(ejecutando)
-// }
+    while(i < 50) {
+        if (i < 10) {
+            const scoreTen = document.querySelector(`input[name="card-${i}"]:checked`).value;
+            console.log(scoreTen);
+        } if (i < 20) {
+            const scoreTwenty = document.querySelector(`input[name="card-${i}"]:checked`).value;
+            console.log(scoreTwenty);
+        } if (i < 30) {
+            const scoreThirty = document.querySelector(`input[name="card-${i}"]:checked`).value;
+            console.log(scoreThirty);
+        } if (i < 40){
+            const scoreFourty = document.querySelector(`input[name="card-${i}"]:checked`).value;
+            console.log(scoreFourty);
+        }
+        const scoreFifty = document.querySelector(`input[name="card-${i}"]:checked`).value;
+        console.log(scoreFifty);
+        // console.log(document.querySelector(`input[name="card-${i}"]:checked`).value);
+        i++
+    }
+    // console.log(document.querySelector('input[name="card-1"]:checked').value);
+    // console.log(document.querySelector('input[name="card-2"]:checked').value);
+    // console.log(document.querySelector('input[name="card-3"]:checked').value);
+    // console.log(document.querySelector('input[name="card-4"]:checked').value);
+    // console.log(document.querySelector('input[name="card-5"]:checked').value);
+    // console.log(document.querySelector('input[name="card-6"]:checked').value);
+    // console.log(document.querySelector('input[name="card-7"]:checked').value);
+    // console.log(document.querySelector('input[name="card-8"]:checked').value);
+    // console.log(document.querySelector('input[name="card-9"]:checked').value);
+    // if(null) {
+    //     alert('debes contestar todas las preguntas')
+    // }
+}
 
 getCategories();
-
-
